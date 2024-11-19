@@ -4,7 +4,9 @@
 import { components, hooks, utils } from '@generouted/react-router/client'
 
 export type Path =
-  | `/`
+  | `/web-can-be-fun`
+  | `/web-can-be-fun/battery`
+  | `/web-can-be-fun/midi`
 
 export type Params = {
   
