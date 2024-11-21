@@ -28,6 +28,11 @@ const Page: FunctionComponent = () => {
                 <List.Item>
                     <PageLink to="/web-can-be-fun/battery">Battery Status API</PageLink>
                 </List.Item>
+                <List.Item>
+                    <Link href="https://creatorsgarten-insta360-link-controller.pages.dev/">
+                        Insta360 controller <LuExternalLink />
+                    </Link>
+                </List.Item>
             </List.Root>
         </VStack>
     );
