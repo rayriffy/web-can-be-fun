@@ -15,11 +15,11 @@ export const Note: FunctionComponent<Props> = ({ note, enabled }) => {
                 transition="backgrounds"
                 transitionDuration="200ms"
                 backgroundColor={enabled ? "green.400" : "gray.100"}
-                display={'flex'}
-                justifyContent={'center'}
-                alignItems={'center'}
+                display="flex"
+                justifyContent="center"
+                alignItems="center"
                 fontSize="2xs"
-                color={"gray.700"}
+                color="gray.700"
             >
                 {note}
             </Box>

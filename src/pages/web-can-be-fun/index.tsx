@@ -20,6 +20,9 @@ const Page: FunctionComponent = () => {
                     </Link>
                 </List.Item>
                 <List.Item>
+                    <PageLink to="/web-can-be-fun/arc">Arc Browser</PageLink>
+                </List.Item>
+                <List.Item>
                     <PageLink to="/web-can-be-fun/midi">Web MIDI</PageLink>
                 </List.Item>
                 <List.Item>

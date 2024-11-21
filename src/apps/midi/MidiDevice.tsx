@@ -10,14 +10,14 @@ export const MidiDevice: FunctionComponent<ParsedMidiDevice> = ({ id, midi }) =>
 
     return (
         <VStack justify="center" align="start" gap={4}>
-            <HStack align={"center"} justify={'space-between'} w={"100%"}>
+            <HStack align="center" justify="space-between" w="100%">
                 <VStack align="start" gap={0}>
                     <Heading>{midi.name}</Heading>
-                    <Text fontSize={"xs"} color={'gray.600'}>Select track mode to instrument 6</Text>
+                    <Text fontSize="xs" color="gray.600">
+                        Select track mode to instrument 6
+                    </Text>
                 </VStack>
-                {notes[notes.length - 1] && (
-                    <Box>{notes[notes.length - 1]}</Box>
-                )}
+                {notes[notes.length - 1] && <Box>{notes[notes.length - 1]}</Box>}
             </HStack>
             {/* Hard coded layout for OP-Z */}
             {midi.name?.toLowerCase().includes("op-z") && (

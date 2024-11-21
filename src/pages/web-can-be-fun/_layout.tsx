@@ -2,7 +2,7 @@ import { Container } from "@chakra-ui/react";
 import { Provider as JotaiProvider } from "jotai";
 import { Outlet } from "react-router-dom";
 
-const App = () => {
+const Layout = () => {
     return (
         <JotaiProvider>
             <Container maxW="xl" py={12}>
@@ -12,4 +12,4 @@ const App = () => {
     );
 };
 
-export default App;
+export default Layout;

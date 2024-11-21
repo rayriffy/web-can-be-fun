@@ -4,22 +4,24 @@ import { SecureContextAlert } from "@/apps/battery/SecureContextAlert.tsx";
 import { UnsupportedAlert } from "@/apps/battery/UnsupportedAlert.tsx";
 import { useBatteryStatus } from "@/apps/battery/useBatteryStatus.ts";
 import { Title } from "@/apps/commons/Title.tsx";
-import { HStack, VStack } from "@chakra-ui/react";
+import { Box, HStack, VStack } from "@chakra-ui/react";
 import type { FunctionComponent } from "react";
 
 const Page: FunctionComponent = () => {
     const { level, supported, charging } = useBatteryStatus();
 
     return (
-        <VStack align="start" gap={6}>
-            <Title title="Battery Status API" description="Content will slowly fading based on battery level" />
-            <SecureContextAlert />
-            {!supported && <UnsupportedAlert />}
-            <HStack gap={2} width="100%">
-                <ChargingIndicator isCharging={charging} />
-                <BatteryLevel level={level} />
-            </HStack>
-        </VStack>
+        <Box opacity={!supported ? undefined : level + "%"}>
+            <VStack align="start" gap={6}>
+                <Title title="Battery Status API" description="Content will slowly fading based on battery level" />
+                <SecureContextAlert />
+                {!supported && <UnsupportedAlert />}
+                <HStack gap={2} width="100%">
+                    <ChargingIndicator isCharging={charging} />
+                    <BatteryLevel level={level} />
+                </HStack>
+            </VStack>
+        </Box>
     );
 };
 
